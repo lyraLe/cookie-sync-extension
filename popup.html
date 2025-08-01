@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi Cookie Sync</title>
+  <meta charset="UTF-8">
+  <style>
+    body { font-family: sans-serif; width: 360px; padding: 10px; }
+    input, button { width: 100%; margin: 5px 0; }
+    label { font-weight: bold; display: block; margin-top: 8px; }
+    .pair { margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+    .input-actions { display: flex; gap: 10px; }
+    .input-actions button { flex: 1; }
+  </style>
+</head>
+<body>
+  <h3>添加同步规则</h3>
+
+  <input type="text" id="sourceUrl" placeholder="源站 URL，例如 https://a.example.com">
+  <input type="text" id="targetUrl" placeholder="目标站 URL，例如 https://b.example.com">
+
+  <div class="input-actions">
+    <button id="addPairBtn">添加配对</button>
+    <button id="clearInputBtn">清空输入</button>
+  </div>
+
+  <h3>配对规则列表</h3>
+  <div id="pairList"></div>
+
+  <button id="syncAllBtn">同步全部 Cookie</button>
+  <p id="status"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
